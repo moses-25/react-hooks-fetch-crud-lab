@@ -12,6 +12,7 @@ function QuestionItem({ question, onDeleteClick, onAnswerChange }) {
   function handleDeleteClick() {
     onDeleteClick(id);
   }
+  
   function handleAnswerChange(event) {
     onAnswerChange(id, event.target.value);
   }
@@ -26,7 +27,7 @@ function QuestionItem({ question, onDeleteClick, onAnswerChange }) {
           {options}
         </select>
       </label>
-      <button>Delete Question</button>
+      <button onClick={handleDeleteClick}>Delete Question</button>
     </li>
   );
 }
